@@ -1,14 +1,14 @@
 /**
-* Edits the number prototype to allow money formatting
-*
-* @param fixed the number to fix the decimal at. Default 2.
-* @param decimalDelim the string to deliminate the non-decimal
-*        parts of the number and the decimal parts with. Default "."
-* @param breakdDelim the string to deliminate the non-decimal
-*        parts of the number with. Default ","
-* @return returns this number as a USD-money-formatted String
-*		  like this: x,xxx.xx
-*/
+ * Edits the number prototype to allow money formatting
+ *
+ * @param fixed the number to fix the decimal at. Default 2.
+ * @param decimalDelim the string to deliminate the non-decimal
+ *        parts of the number and the decimal parts with. Default "."
+ * @param breakdDelim the string to deliminate the non-decimal
+ *        parts of the number with. Default ","
+ * @return returns this number as a USD-money-formatted String
+ *		  like this: x,xxx.xx
+ */
 Number.prototype.money = function (fixed, decimalDelim, breakDelim) {
 	var n = this,
 		fixed = isNaN(fixed = Math.abs(fixed)) ? 2 : fixed,
@@ -18,22 +18,34 @@ Number.prototype.money = function (fixed, decimalDelim, breakDelim) {
 		i = parseInt(n = Math.abs(+n || 0).toFixed(fixed)) + "",
 		j = (j = i.length) > 3 ? j % 3 : 0;
 	return negative + (j ? i.substr(0, j) +
-		breakDelim : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + breakDelim) +
+			breakDelim : "") + i.substr(j).replace(/(\d{3})(?=\d)/g, "$1" + breakDelim) +
 		(fixed ? decimalDelim + Math.abs(n - i).toFixed(fixed).slice(2) : "");
 }
 
 /**
-* Plays a sound via HTML5 through Audio tags on the page
-*
-* @require the id must be the id of an <audio> tag.
-* @param id the id of the element to play
-* @param loop the boolean flag to loop or not loop this sound
-*/
+ * Plays a sound via HTML5 through Audio tags on the page
+ *
+ * @require the id must be the id of an <audio> tag.
+ * @param id the id of the element to play
+ * @param loop the boolean flag to loop or not loop this sound
+ */
 startSound = function (id, loop) {
 	soundHandle = document.getElementById(id);
 	if (loop)
 		soundHandle.setAttribute('loop', loop);
-	soundHandle.play();
+	var playPromise = soundHandle.play();
+
+	if (playPromise !== undefined) {
+		playPromise.then(_ => {
+				// Automatic playback started!
+				// Show playing UI.
+			})
+			.catch(error => {
+				// Auto-play was prevented
+				// Show paused UI.
+			});
+	}
+
 }
 stopSound = function (id) {
 	soundHandle = document.getElementById(id);
@@ -42,11 +54,11 @@ stopSound = function (id) {
 }
 
 /**
-* The View Model that represents one game of
-* Who Wants to Be a Millionaire.
-* 
-* @param data the question bank to use
-*/
+ * The View Model that represents one game of
+ * Who Wants to Be a Millionaire.
+ * 
+ * @param data the question bank to use
+ */
 var MillionaireModel = function (data) {
 	var self = this;
 
@@ -128,8 +140,8 @@ var MillionaireModel = function (data) {
 	self.rightAnswer = function (elm) {
 		$("#" + elm).slideUp('slow', function () {
 			startSound('rightsound', false);
-			$("#" + elm).css('background','green').slideDown('slow', function () {
-				self.sleep(5000, function(){
+			$("#" + elm).css('background', 'green').slideDown('slow', function () {
+				self.sleep(5000, function () {
 					self.next(elm);
 				});
 			});
@@ -140,8 +152,8 @@ var MillionaireModel = function (data) {
 	self.wrongAnswer = function (elm) {
 		$("#" + elm).slideUp('slow', function () {
 			startSound('wrongsound', false);
-			$("#" + elm).css('background','red').slideDown('slow', function () {
-				self.sleep(5000, function(){
+			$("#" + elm).css('background', 'red').slideDown('slow', function () {
+				self.sleep(5000, function () {
 					self.next(elm);
 				});
 			});
@@ -153,7 +165,7 @@ var MillionaireModel = function (data) {
 		return self.money().money(2, '.', ',');
 	}
 
-	self.next = function(elm){
+	self.next = function (elm) {
 		if (self.level() + 1 > 10) {
 			$("#game").fadeOut('slow', function () {
 				$("#game-over").html('Nhóm xin chân thành cảm ơn sự theo dõi của mọi người !!!');
@@ -170,7 +182,7 @@ var MillionaireModel = function (data) {
 		}
 	}
 
-	self.sleep = function(ms, cb){
+	self.sleep = function (ms, cb) {
 		setTimeout(cb, ms);
 	}
 };

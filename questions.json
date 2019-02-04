@@ -1,107 +1,108 @@
 {
-	"games" : [
-		{
-		    "questions" : [
-		        {
-		            "question" : "Tổ chức thương mại thế giới (WTO) chính thức được thành lập từ năm nào : ",
-		            "content" : [
-		                "Năm 1947",
-		                "Năm 1994",
-		                "Năm 1995",
-		                "Năm 2000"
-		            ],
-		            "correct" : 2
-		        },{
-		            "question" : "Trụ sở chính của WTO hiện nay đang đặt ở thành phố nào?",
-		            "content" : [
-		                "Milan (Italia)",
-		                "New York (Mỹ)",
-		                "Pari (Pháp)",
-		                "Genever (Thuỵ sĩ)"
-		            ],
-		            "correct" : 3
-		        },{
-		            "question" : "Việt Nam chính thức gia nhập WTO vào ngày, tháng, năm nào ?",
-		            "content" : [
-		                "Ngày 07/9/2006",
-		                "Ngày 07/10/2006",
-		                "Ngày 07/11/2006",
-		                "Ngày 07/12/2006"
-		            ],
-		            "correct" : 2
-		        },
-{
-		            "question" : "Công cụ hợp pháp duy nhất để bảo hộ các ngành sản xuất trong nước được WTO thừa nhận là gì?",
-		            "content" : [
-		                "Hạn ngạch",
-		                "Thuế quan",
-		                "Yêu cầu về chất lượng, tiêu chuẩn hàng hoá",
-		                "giấy phép nhập khẩu"
-		            ],
-		            "correct" : 1
-		        },
-{
-		            "question" : "Tiền thân của WTO là tổ chức nào dưới đây ?",
-		            "content" : [
-		                "WHO",
-		                "IMF",
-		                "FAO",
-		                "GATT"
-		            ],
-		            "correct" : 3
-		        },
-{
-		            "question" : "Trong sản xuất nông nghiệp, các hoạt động nào sau đây được WTO cho phép thực hiện ?",
-		            "content" : [
-		                "Trợ cấp cho công tác lai tạo giống mới và đầu tư cho nông dân có thu nhập thấp, hỗ trợ cho công việc chuyển đổi cơ cấu và phương thức canh tác.",
-		                "Trợ cấp xuất khẩu",
-		                "Trợ cấp sản xuất",
-		                "Cả 3 nội dung trên."
-		            ],
-		            "correct" : 0
-		        },
-{
-		            "question" : "Đâu là cơ quan có thẩm quyền cao nhất trong WTO?",
-		            "content" : [
-		                "Hội nghị Bộ Trưởng",
-		                "Đại hội đồng",
-		                "Các hội đồng thương mại",
-		                "Các ủy ban và cơ quan"
-		            ],
-		            "correct" : 0
-		        },
-{
-		            "question" : "Các hình thức trợ cấp nông nghiệp nào đang được áp dụng tại Việt Nam",
-		            "content" : [
-		                "Đầu tư cho việc xây dựng kết cấu hạ tầng nông thôn.",
-		                "Đầu tư cho công tác phòng chống dịch bệnh, thiên tai, nghiên cứu khoa học, khuyến nông, chương trình cải thiện giống cây trồng, giống vật nuôi.",
-		                "Đầu tư cho công tác phòng chống dịch bệnh, thiên tai, nghiên cứu khoa học, khuyến nông, chương trình cải thiện giống cây trồng, giống vật nuôi.",
-		                "Phương án A và B "
-		            ],
-		            "correct" : 3
-		        },
-{
-		            "question" : "Vào ngày 07/11/2006 Việt Nam được kết nạp trở thành thành viên tổ chức thương mại thế giới WTO lúc đó Việt Nam là thành viên thứ?",
-		            "content" : [
-		                "149",
-		                "150",
-		                "151",
-		                "152"
-		            ],
-		            "correct" : 1
-		        },
-{
-		            "question" : "Việt Nam đã cam kết mở cửa bao nhiêu ngành và phân ngành dịch vụ theo quy định của WTO?",
-		            "content" : [
-		                "10 và 110",
-		                "11 và 110",
-		                "11 và 111",
-		                "10 và 111"
-		            ],
-		            "correct" : 1
-		        }
-
-		    ]
-		}
+	"games":[
+	   {
+		  "questions":[
+			 {
+				"question":"Tổ chức thương mại thế giới (WTO) chính thức được thành lập từ năm nào : ",
+				"content":[
+				   "Năm 1947",
+				   "Năm 1994",
+				   "Năm 1995",
+				   "Năm 2000"
+				],
+				"correct":2
+			 },
+			 {
+				"question":"Trụ sở chính của WTO hiện nay đang đặt ở thành phố nào?",
+				"content":[
+				   "Milan (Italia)",
+				   "New York (Mỹ)",
+				   "Pari (Pháp)",
+				   "Genever (Thuỵ sĩ)"
+				],
+				"correct":3
+			 },
+			 {
+				"question":"Việt Nam chính thức gia nhập WTO vào ngày, tháng, năm nào ?",
+				"content":[
+				   "Ngày 07/9/2006",
+				   "Ngày 07/10/2006",
+				   "Ngày 07/11/2006",
+				   "Ngày 07/12/2006"
+				],
+				"correct":2
+			 },
+			 {
+				"question":"Công cụ hợp pháp duy nhất để bảo hộ các ngành sản xuất trong nước được WTO thừa nhận là gì?",
+				"content":[
+				   "Hạn ngạch",
+				   "Thuế quan",
+				   "Yêu cầu về chất lượng, tiêu chuẩn hàng hoá",
+				   "giấy phép nhập khẩu"
+				],
+				"correct":1
+			 },
+			 {
+				"question":"Tiền thân của WTO là tổ chức nào dưới đây ?",
+				"content":[
+				   "WHO",
+				   "IMF",
+				   "FAO",
+				   "GATT"
+				],
+				"correct":3
+			 },
+			 {
+				"question":"Trong sản xuất nông nghiệp, các hoạt động nào sau đây được WTO cho phép thực hiện ?",
+				"content":[
+				   "Trợ cấp cho công tác lai tạo giống mới và đầu tư cho nông dân có thu nhập thấp, hỗ trợ cho công việc chuyển đổi cơ cấu và phương thức canh tác.",
+				   "Trợ cấp xuất khẩu",
+				   "Trợ cấp sản xuất",
+				   "Cả 3 nội dung trên."
+				],
+				"correct":0
+			 },
+			 {
+				"question":"Đâu là cơ quan có thẩm quyền cao nhất trong WTO?",
+				"content":[
+				   "Hội nghị Bộ Trưởng",
+				   "Đại hội đồng",
+				   "Các hội đồng thương mại",
+				   "Các ủy ban và cơ quan"
+				],
+				"correct":0
+			 },
+			 {
+				"question":"Các hình thức trợ cấp nông nghiệp nào đang được áp dụng tại Việt Nam",
+				"content":[
+				   "Đầu tư cho việc xây dựng kết cấu hạ tầng nông thôn.",
+				   "Đầu tư cho công tác phòng chống dịch bệnh, thiên tai, nghiên cứu khoa học, khuyến nông, chương trình cải thiện giống cây trồng, giống vật nuôi.",
+				   "Đầu tư cho công tác phòng chống dịch bệnh, thiên tai, nghiên cứu khoa học, khuyến nông, chương trình cải thiện giống cây trồng, giống vật nuôi.",
+				   "Phương án A và B "
+				],
+				"correct":3
+			 },
+			 {
+				"question":"Vào ngày 07/11/2006 Việt Nam được kết nạp trở thành thành viên tổ chức thương mại thế giới WTO lúc đó Việt Nam là thành viên thứ?",
+				"content":[
+				   "149",
+				   "150",
+				   "151",
+				   "152"
+				],
+				"correct":1
+			 },
+			 {
+				"question":"Việt Nam đã cam kết mở cửa bao nhiêu ngành và phân ngành dịch vụ theo quy định của WTO?",
+				"content":[
+				   "10 và 110",
+				   "11 và 110",
+				   "11 và 111",
+				   "10 và 111"
+				],
+				"correct":1
+			 }
+		  ]
+	   }
 	]
-}
+ }
