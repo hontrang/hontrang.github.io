@@ -33,24 +33,16 @@ startSound = function (id, loop) {
 	soundHandle = document.getElementById(id);
 	if (loop)
 		soundHandle.setAttribute('loop', loop);
-	var playPromise = soundHandle.play();
-
-	if (playPromise !== undefined) {
-		playPromise.then(_ => {
-				// Automatic playback started!
-				// Show playing UI.
-			})
-			.catch(error => {
-				// Auto-play was prevented
-				// Show paused UI.
-			});
-	}
-
+	soundHandle.play();
 }
 stopSound = function (id) {
 	soundHandle = document.getElementById(id);
 	soundHandle.pause();
 	soundHandle.currentTime = 0;
+}
+
+sleep = function (ms, cb) {
+	setTimeout(cb, ms);
 }
 
 /**
@@ -141,7 +133,7 @@ var MillionaireModel = function (data) {
 		$("#" + elm).slideUp('slow', function () {
 			startSound('rightsound', false);
 			$("#" + elm).css('background', 'green').slideDown('slow', function () {
-				self.sleep(5000, function () {
+				sleep(5000, function () {
 					self.next(elm);
 				});
 			});
@@ -153,7 +145,7 @@ var MillionaireModel = function (data) {
 		$("#" + elm).slideUp('slow', function () {
 			startSound('wrongsound', false);
 			$("#" + elm).css('background', 'red').slideDown('slow', function () {
-				self.sleep(5000, function () {
+				sleep(5000, function () {
 					self.next(elm);
 				});
 			});
@@ -181,10 +173,6 @@ var MillionaireModel = function (data) {
 			self.transitioning = false;
 		}
 	}
-
-	self.sleep = function (ms, cb) {
-		setTimeout(cb, ms);
-	}
 };
 
 // Executes on page load, bootstrapping
@@ -201,6 +189,9 @@ $(document).ready(function () {
 				startSound('background', true);
 				$("#game").fadeIn('slow');
 			});
+		});
+		$("#preload-btn").click(function () {
+			startSound('preload', true);
 		});
 	});
 });
