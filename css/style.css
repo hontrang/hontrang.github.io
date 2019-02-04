@@ -112,6 +112,12 @@ audio {
 	font-size: 72px;
 }
 
+
+#preload-btn {
+	margin: 0px auto;
+	display: block;
+	font-size: 12px;
+}
 .answer:hover {
 	text-decoration: underline;
 	cursor: pointer;

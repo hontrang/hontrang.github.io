@@ -33,9 +33,7 @@ startSound = function (id, loop) {
 	soundHandle = document.getElementById(id);
 	if (loop)
 		soundHandle.setAttribute('loop', loop);
-	sleep(5000, function () {
-		soundHandle.play();
-	});
+	soundHandle.play();
 }
 stopSound = function (id) {
 	soundHandle = document.getElementById(id);
@@ -191,6 +189,9 @@ $(document).ready(function () {
 				startSound('background', true);
 				$("#game").fadeIn('slow');
 			});
+		});
+		$("#preload-btn").click(function () {
+			startSound('preload', true);
 		});
 	});
 });
